@@ -214,7 +214,6 @@
   <div class="carousel-wrapper">
     <div class="life-grid-track" id="life-track">
       
-      <!-- 🟢 SLIDE 1 (First 2 Images) -->
       <div class="carousel-slide">
         <div class="life-card">
           <img src="media/IV2.jpg" alt="Industrial Visit" class="life-img" />
@@ -222,33 +221,13 @@
           <div class="life-label-overlay">Industrial Visit</div>
         </div>
         <div class="life-card">
-          <img src="media/Seminars.jpg" alt="Seminars" class="life-img" />
-          <span class="life-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
-          <div class="life-label-overlay">Seminar Programs</div>
-        </div>
-      </div>
-
-      <!-- 🟢 SLIDE 2 (Next 2 Images) -->
-      <div class="carousel-slide">
-        <div class="life-card">
           <img src="media/tour.jpg" alt="Tours" class="life-img" />
           <span class="life-icon"><i class="fa-solid fa-flask" aria-hidden="true"></i></span>
           <div class="life-label-overlay">Tours</div>
         </div>
-        <div class="life-card">
-          <img src="media/Graduation1.jpg" alt="Graduation Ceremony" class="life-img" />
-          <span class="life-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
-          <div class="life-label-overlay">Graduation Ceremony</div>
-        </div>
       </div>
 
     </div>
-  </div>
-
-  <!-- 🟢 CAROUSEL DOTS -->
-  <div class="carousel-dots">
-    <span class="dot active" onclick="moveCarousel(0)"></span>
-    <span class="dot" onclick="moveCarousel(1)"></span>
   </div>
 </section>
 
@@ -311,7 +290,7 @@
       <!-- Hidden course field so EmailJS template receives the course data from this form too -->
       <input type="hidden" name="course" value="B.Pharm Lateral Entry" />
       
-      <button type="submit" class="btn-submit" style="background: #408A71;">Submit Details</button>
+      <button type="submit" class="btn-submit" style="background: #4988C4;">Submit Details</button>
     </form>
   </div>
 </section>
@@ -393,19 +372,6 @@
       navbar.classList.remove('scrolled');
     }
   });
-
-  // Carousel Slide Logic
-  function moveCarousel(slideIndex) {
-    const track = document.getElementById('life-track');
-    const dots = document.querySelectorAll('.carousel-dots .dot');
-    
-    // Slide the track based on the index (0% or -50%)
-    track.style.transform = `translateX(-${slideIndex * 50}%)`;
-    
-    // Update active dot styling
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[slideIndex].classList.add('active');
-  }
 
   // --- EmailJS Setup & Submission Logic ---
   (function() {
