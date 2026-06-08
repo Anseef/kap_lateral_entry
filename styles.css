@@ -416,7 +416,7 @@ ul { list-style: none; }
 
 .video-card:hover .play-btn { 
   transform: scale(1.15); 
-  background: rgba(176, 228, 204, 0.9); 
+  background: #eef4f6; 
   color: var(--kap-darkest); 
 }
 
