@@ -9,15 +9,12 @@
   <meta name="robots" content="index, follow" />
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <!-- FontAwesome Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ══════════════════════════════
-     NAVBAR
-══════════════════════════════ -->
 <nav class="navbar">
   <div class="navbar-logo">
     <div class="logo-box">
@@ -33,22 +30,27 @@
     <span></span>
     <span></span>
   </button>
+
   <ul class="nav-links" id="nav-links">
     <li><a href="#courses">Courses</a></li>
     <li><a href="#vision">Vision & Mission</a></li>
     <li><a href="#campus-life">Campus Life</a></li>
     <li><a href="#admissions">Admissions</a></li>
+    
+    <li class="mobile-menu-extras">
+      <a href="tel:+917736952425" class="mobile-phone-link">
+        <i class="fa-solid fa-phone" style="color: var(--teal);"></i> +91 7736952425
+      </a>
+      <a href="#admissions" class="mobile-cta-btn">Apply Now</a>
+    </li>
   </ul>
 
   <div class="nav-right">
     <span class="nav-phone"><i class="fa-solid fa-phone" style="color: var(--teal);" aria-hidden="true"></i> +91 7736952425</span>
-    <a href="#" class="btn-apply">Apply Now</a>
+    <a href="#admissions" class="btn-apply">Apply Now</a>
   </div>
 </nav>
 
-<!-- ══════════════════════════════
-     HERO
-══════════════════════════════ -->
 <section class="hero">
   <div class="hero-content">
     <span class="hero-badge">Join India's Career Focused</span>
@@ -72,7 +74,6 @@
   </div>
 
   <div class="hero-form-wrap">
-  <!-- EmailJS Hero Form -->
   <form id="hero-form" class="enquiry-form">
     <p class="form-tag">Limited Seats</p>
     <h3>Enquire Now</h3>
@@ -105,16 +106,10 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     DIVIDER BAR
-══════════════════════════════ -->
 <div class="blue-strip">
   B.Pharm Lateral Entry Program — Learning Beyond Classrooms
 </div>
 
-<!-- ══════════════════════════════
-     AFFILIATIONS
-══════════════════════════════ -->
 <section class="affiliations">
   <div class="affil-logos">
     <div class="affil-item">
@@ -145,9 +140,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     COURSES OFFERED
-══════════════════════════════ -->
 <section class="section" style="background:#fff;" id="courses">
   <p class="section-label">Courses Offered</p>
   <h2 class="section-title">Discover the program that shapes your future</h2>
@@ -180,9 +172,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     VISION & MISSION
-══════════════════════════════ -->
 <section class="vision-section" id="vision">
   <div class="vision-content">
     <h2>Our <span>Vision & Mission</span></h2>
@@ -204,9 +193,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     LIFE AT KAP (CAROUSEL)
-══════════════════════════════ -->
 <section class="life-section" id="campus-life">
   <p class="section-label">Life at KAP</p>
   <h2 class="section-title">Experience the Campus</h2>
@@ -231,9 +217,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     VOICES (VIDEO TESTIMONIALS)
-══════════════════════════════ -->
 <section class="video-section">
   <p class="section-label light-label">Because their journey speaks for itself</p>
   <h2 class="section-title light-title">Voices from Our Students & Faculty</h2>
@@ -259,9 +242,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     BOTTOM CTA
-══════════════════════════════ -->
 <section class="cta-section reverse-layout" id="admissions">
   <div class="cta-content">
     <span class="cta-badge">Ready to Redefine Your Future?</span>
@@ -272,7 +252,6 @@
   </div>
 
   <div class="hero-form-wrap">
-    <!-- EmailJS Bottom Form -->
     <form id="cta-form" class="enquiry-form">
       <p class="form-tag">Admissions Open</p>
       <h3>Join Today</h3>
@@ -287,17 +266,13 @@
         </select>
         <input type="text" name="city" placeholder="City" />
       </div>
-      <!-- Hidden course field so EmailJS template receives the course data from this form too -->
       <input type="hidden" name="course" value="B.Pharm Lateral Entry" />
       
-      <button type="submit" class="btn-submit" style="background: #4988C4;">Submit Details</button>
+      <button type="submit" class="btn-submit" style="background: var(--kap-main);">Submit Details</button>
     </form>
   </div>
 </section>
 
-<!-- ══════════════════════════════
-     FOOTER
-══════════════════════════════ -->
 <footer class="footer">
   <div class="footer-grid">
     
@@ -346,17 +321,13 @@
   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 </a>
 
-<!-- ══════════════════════════════
-     SCRIPTS
-══════════════════════════════ -->
-<!-- 1. EmailJS Library -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<!-- 2. UI and Logic Scripts -->
 <script>
   // --- UI Interactivity ---
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
+  const navbar = document.querySelector('.navbar');
 
   // Add a click event to toggle the 'active' classes
   hamburger.addEventListener('click', () => {
@@ -418,7 +389,6 @@
   }
   
   const navItems = document.querySelectorAll('.nav-links a');
-  const navbar = document.querySelector('.navbar');
 
   navItems.forEach(item => {
     item.addEventListener('click', function(e) {
